@@ -49,7 +49,7 @@ export const TransactionHistory = ({ transactions }) => {
   );
 };
 
-TransactionHistory.protoTypes = {
+TransactionsHistory.protoTypes = {
   transactions: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
