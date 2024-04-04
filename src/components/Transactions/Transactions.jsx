@@ -1,36 +1,60 @@
 import PropTypes from 'prop-types';
 import css from './Transactions.css';
 
-export const Transactions = ({ transactions }) => {
+export const TransactionHistory = ({ transactions }) => {
   return (
-    <table className={css.transactions}>
-      <thead>
+    <table className={css.transactionHistory}>
+      <thead className={css.head}>
         <tr>
-          <th>Type</th>
-          <th>Amount</th>
-          <th>Currency</th>
+          <th className={css.th}>Type</th>
+          <th className={css.th}>Amount</th>
+          <th className={css.th}>Currency</th>
         </tr>
       </thead>
 
       <tbody>
-        {transactions.map(({ id, type, amount, currency }) => (
-          <tr key={id}>
-            <td>{type}</td>
-            <td>{amount}</td>
-            <td>{currency}</td>
-          </tr>
-        ))}
+        {transactions.map(({ id, type, amount, currency }) => {
+          return (
+            <tr className={css.tr} key={id}>
+              <td
+                className={css.td}
+                style={{
+                  textTransform: 'capitalize',
+                  color: '#818181',
+                }}
+              >
+                {type}
+              </td>
+              <td
+                className={css.td}
+                style={{
+                  color: '#818181',
+                }}
+              >
+                {amount}
+              </td>
+              <td
+                className={css.td}
+                style={{
+                  color: '#818181',
+                }}
+              >
+                {currency}
+              </td>
+            </tr>
+          );
+        })}
       </tbody>
     </table>
   );
 };
 
-Transactions.propTypes = {
+TransactionHistory.protoTypes = {
   transactions: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
       type: PropTypes.string.isRequired,
-      amount: PropTypes.number.isRequired,
+      amount: PropTypes.string.isRequired,
       currency: PropTypes.string.isRequired,
     })
   ).isRequired,
