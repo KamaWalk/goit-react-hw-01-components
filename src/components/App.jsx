@@ -5,7 +5,7 @@ import user from './Profile/user.json';
 import { Statistics } from './Statistic/Statistics';
 import data from './Statistic/data.json';
 import { TransactionHistory } from './TransactionHistory/TransactionHistory';
-import transactions from '/GoIT/reactHW1/goit-react-hw-01-components/src/components/transactions.json';
+import transactions from './TransactionHistory/transactions.json';
 
 export const App = () => {
   return (
