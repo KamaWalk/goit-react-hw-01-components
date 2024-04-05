@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import css from './Statistics.css';
+import css from './Statistics.module.css';
 
 export const Statistics = ({ title, stats }) => {
   const generateRandomColor = () => {

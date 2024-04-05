@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import css from './Transactions.css';
+import css from './TransactionHistory.module.css';
 
 export const TransactionHistory = ({ transactions }) => {
   return (
@@ -49,7 +49,7 @@ export const TransactionHistory = ({ transactions }) => {
   );
 };
 
-TransactionsHistory.protoTypes = {
+TransactionHistory.protoTypes = {
   transactions: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,

@@ -4,8 +4,8 @@ import { Profile } from './Profile/Profile';
 import user from './Profile/user.json';
 import { Statistics } from './Statistic/Statistics';
 import data from './Statistic/data.json';
-import { Transactions } from './Transactions/Transactions';
-import transactions from './Transactions/transactionsHistory.json';
+import { TransactionHistory } from './TransactionHistory/TransactionHistory';
+import transactions from '/GoIT/reactHW1/goit-react-hw-01-components/src/components/transactions.json';
 
 export const App = () => {
   return (
@@ -28,7 +28,7 @@ export const App = () => {
       />
       <Statistics title="Upload Stats" stats={data} />
       <FriendList friends={friends} />
-      <Transactions transactions={transactions} />
+      <TransactionHistory transactions={transactions} />
     </div>
   );
 };

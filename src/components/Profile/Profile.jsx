@@ -1,17 +1,7 @@
 import PropTypes from 'prop-types';
-import css from './Profile.css'
+import css from './Profile.module.css'
 
-Profile.propTypes = {
-  userName: PropTypes.string.isRequired,
-  tag: PropTypes.string.isRequired,
-  location: PropTypes.string.isRequired,
-  avatar: PropTypes.string.isRequired,
-  stats: PropTypes.shape({
-    followers: PropTypes.number.isRequired,
-    likes: PropTypes.number.isRequired,
-    views: PropTypes.number.isRequired,
-}).isRequired,
-};
+
 export const Profile = ({ username, tag, location, avatar, stats }) => {
   return (
   <div className={css.profile}>
@@ -19,7 +9,7 @@ export const Profile = ({ username, tag, location, avatar, stats }) => {
     <img
       src={avatar}
       alt={username}
-      class={css.avatar}
+      className={css.avatar}
     />
     <p className={css.name}>{username}</p>
     <p className={css.tag}>@{tag}</p>
@@ -43,3 +33,16 @@ export const Profile = ({ username, tag, location, avatar, stats }) => {
 </div>
 )
 }
+
+
+Profile.propTypes = {
+  username: PropTypes.string.isRequired,
+  tag: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  avatar: PropTypes.string.isRequired,
+  stats: PropTypes.shape({
+    followers: PropTypes.number.isRequired,
+    likes: PropTypes.number.isRequired,
+    views: PropTypes.number.isRequired,
+}).isRequired,
+};

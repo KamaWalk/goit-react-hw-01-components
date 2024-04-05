@@ -15,9 +15,9 @@
   }
   
   .avatar {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
+    width: 180px;
+    height: auto;
+    border-radius: 25%;
     box-shadow: 0 5px 7px -1px #33333340;
   }
   
@@ -31,7 +31,7 @@
   .tag,
   .location {
     font-size: 12px;
-    color: #ee36d0;
+    color: #7d206e;
     margin-bottom: 10px;
     font-weight: lighter;
   }
@@ -44,6 +44,7 @@
     border-radius: 20px;
     margin: 0;
     padding: 0;
+    justify-content: space-around;
   }
   
   .list {
